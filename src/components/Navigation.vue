@@ -2,7 +2,7 @@
   <div id="navigation-wrap">
     <img id="logo" src="../assets/logo.png" />
     <div id="menu" @click="toggleNavigation">
-      <div v-if="!active">
+      <div class="menu-inner-wrap" v-if="!active">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-6 w-6"
@@ -18,7 +18,7 @@
           />
         </svg>
       </div>
-      <div v-if="active">
+      <div v-if="active" class="menu-inner-wrap">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-6 w-6"
@@ -79,6 +79,9 @@ export default {
   justify-content: center;
   align-items: center;
   z-index: 3;
+}
+.menu-inner-wrap {
+  width: 2em;
 }
 #logo {
   width: 12.5em;

@@ -1,6 +1,10 @@
 <template>
   <div id="home">
-    <div id="title">Stable Revenue. Fluid reserves. Multichain liquidity.</div>
+    <div id="title" data-aos="fade-down">
+      Stable Revenue.
+      <div class="fluid">Fluid</div>
+      reserves. Multichain liquidity.
+    </div>
     <div id="animation-wrap">
       <svg
         id="eMoTkPKHuG41"
@@ -14937,7 +14941,7 @@
       </svg>
     </div>
     <div id="cta-wrap">
-      <button class="cta-btn">
+      <button class="cta-btn" data-aos="fade-up">
         <div>Presale</div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -17923,7 +17927,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-grow: 1;
+  padding-top: 0.5em;
 }
 .cta-btn {
   background: transparent;
@@ -17944,5 +17948,9 @@ export default {
   padding-left: 0.75em;
   height: 28px;
   width: 28px;
+}
+.fluid {
+  display: contents;
+  color: #00df57;
 }
 </style>
