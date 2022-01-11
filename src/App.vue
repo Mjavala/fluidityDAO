@@ -24,5 +24,6 @@ body {
 }
 #app-wrapper {
   height: 100%;
+  position: relative;
 }
 </style>

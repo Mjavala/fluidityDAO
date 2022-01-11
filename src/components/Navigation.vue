@@ -37,9 +37,9 @@
     </div>
     <transition name="fade">
       <div id="navigation-links" class="fade-in" v-if="active">
-        <div class="navlinks">Home</div>
-        <div class="navlinks">About</div>
-        <div class="navlinks">Roadmap</div>
+        <div class="navlinks" @click="toLocation(0)">Home</div>
+        <div class="navlinks" @click="toLocation(1)">About</div>
+        <div class="navlinks" @click="toLocation(2)">Roadmap</div>
       </div>
     </transition>
   </div>
@@ -54,8 +54,20 @@ export default {
   },
   methods: {
     toggleNavigation() {
-      console.log("here");
       this.active = !this.active;
+    },
+    toLocation(number) {
+      let el;
+      if (number == 0) el = document.getElementById("home");
+      else if (number == 1) el = document.getElementById("about-wrap");
+      else if (number == 2) el = document.getElementById("roadmap-wrapper");
+
+      this.$smoothScroll({
+        scrollTo: el,
+      });
+      setTimeout(() => {
+        this.toggleNavigation();
+      }, 500);
     },
   },
 };
@@ -70,6 +82,7 @@ export default {
   width: 100%;
   position: fixed;
   max-height: 108px;
+  z-index: 11;
 }
 #menu {
   cursor: pointer;

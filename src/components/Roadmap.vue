@@ -1,5 +1,5 @@
 <template>
-  <div class="roadmap-wrapper">
+  <div id="roadmap-wrapper" class="roadmap-wrapper" ref="roadmap">
     <div class="roadmap-content-wrapper">
       <div class="roadmap">
         <div class="roadmap-title" data-aos="fade-up">Roadmap</div>
@@ -456,7 +456,7 @@ Main components
   position: absolute;
   top: 4%;
   left: 25px;
-  height: 80%;
+  height: 87.5%;
   width: 4px;
   /**
     background: #d761ed;
