@@ -480,14 +480,14 @@ Main components
   #cd-timeline::before {
     left: 50%;
     margin-left: -2px;
-    top: 10%;
-    height: 75%;
+    height: 90%;
+    top: 2%;
   }
 }
 
 @media only screen and (min-width: 1400px) {
   #cd-timeline::before {
-    top: 7.5%;
+    top: 3%;
   }
 }
 
@@ -741,14 +741,18 @@ Main components
   .cloud {
     display: unset;
   }
+  .roadmap-title {
+    font-size: 2.25em;
+  }
 }
 /** desktop */
 @media screen and (min-width: 1200px) {
   .roadmap-title {
-    font-size: 3.25em;
+    font-size: 4.25em;
+    padding-right: 1em;
   }
   .roadmap-text {
-    font-size: 1.75em;
+    font-size: 2.75em;
   }
   .roadmap-header {
     font-size: 3.25em;
@@ -757,44 +761,49 @@ Main components
     width: 7.5vw;
   }
   .cd-timeline-img {
-    left: 45%;
+    left: 47.5%;
   }
-  .planet-blue {
-    top: -4%;
-    right: -4%;
+  .checkmark {
+    height: 4em;
+    width: 4em;
+  }
+  .rm-text h2 {
+    font-size: 3em;
+  }
+  .cd-timeline-content p {
+    font-size: 2em;
   }
 }
 
 /** desktop */
 @media screen and (min-width: 1400px) {
   .roadmap-title {
-    font-size: 3.25em;
+    font-size: 3.75em;
     line-height: 1.5em;
   }
   .cd-timeline-content h2 {
-    font-size: 2em;
+    font-size: 3em;
   }
   .cd-timeline-content p {
-    font-size: 1.5em;
+    font-size: 2em;
   }
-  .cd-timeline-img {
-    left: 44%;
+}
+
+@media screen and (min-width: 1500px) {
+  #cd-timeline::before {
+    top: 2%;
+  }
+  .roadmap-title {
+    font-size: 4em;
   }
 }
 
 @media screen and (min-width: 1600px) {
-  .cd-timeline-img {
-    left: 43.5%;
-  }
-  .planet-blue {
-    top: 0%;
-    right: 0%;
-  }
 }
 /** desktop */
 @media screen and (min-width: 1900px) {
   .roadmap-title {
-    font-size: 3.25em;
+    font-size: 4.75em;
   }
   .cd-timeline-content h2 {
     font-size: 2.5em;
@@ -812,8 +821,8 @@ Main components
     width: 60px;
     left: 48%;
   }
-  .cd-timeline-img {
-    left: 43%;
+  #cd-timeline::before {
+    top: 3%;
   }
 }
 </style>

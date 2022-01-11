@@ -55,4 +55,21 @@
     width: 50%;
   }
 }
+
+/** landscape, tablet, responsive design */
+@media screen and (min-width: 900px) {
+  .avalanche {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .avalanche {
+    width: 30%;
+    padding-bottom: 0.5em;
+  }
+  .footer-socials {
+    width: 75%;
+    padding-top: 2em;
+  }
+}
 </style>

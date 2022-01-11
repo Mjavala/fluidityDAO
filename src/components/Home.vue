@@ -5,6 +5,14 @@
       <div class="fluid">Fluid</div>
       reserves. Multichain liquidity.
     </div>
+    <div id="title-desktop" data-aos="fade-down">
+      <div class="fluid">Fluid</div>
+      reserves. <br />
+      <div class="stable">Stable</div>
+      Revenue. <br />
+      <div class="multichain">Multichain</div>
+      liquidity.
+    </div>
     <div id="animation-wrap">
       <svg
         id="eMoTkPKHuG41"
@@ -14940,6 +14948,30 @@
         </g>
       </svg>
     </div>
+    <div id="desktop-hero">
+      <div class="card">
+        <div class="card-item">
+          <div class="card-item-title">APY</div>
+          <div class="card-item-info">31,200%</div>
+          <div class="spacer"></div>
+        </div>
+        <div class="card-item">
+          <div class="card-item-title">Treasury Balance</div>
+          <div class="card-item-info">$11,200,122</div>
+          <div class="spacer"></div>
+        </div>
+        <div class="card-item">
+          <div class="card-item-title">Market Cap</div>
+          <div class="card-item-info">$9,107,220</div>
+          <div class="spacer"></div>
+        </div>
+        <div class="card-item">
+          <div class="card-item-title">TVL</div>
+          <div class="card-item-info">$99,027,820</div>
+          <div class="spacer"></div>
+        </div>
+      </div>
+    </div>
     <div id="cta-wrap">
       <button class="cta-btn" data-aos="fade-up">
         <div>Presale</div>
@@ -17902,7 +17934,8 @@ export default {
   display: flex;
   flex-direction: column;
 }
-#title {
+#title,
+#title-desktop {
   width: 100%;
   color: white;
   font-family: "Baloo Bhaina 2", cursive;
@@ -17952,13 +17985,91 @@ export default {
 }
 .fluid {
   display: contents;
+  color: #ff980b;
+}
+.stable {
+  display: contents;
+  color: #9a34db;
+}
+.multichain {
+  display: contents;
   color: #00df57;
+}
+
+#desktop-hero {
+  display: none;
 }
 
 /** landscape, tablet, responsive design */
 @media screen and (min-width: 600px) {
   #title {
     font-size: 1.75em;
+  }
+}
+/** landscape, tablet, responsive design */
+@media screen and (min-width: 900px) {
+  #home {
+    flex-direction: row;
+    height: 100vh;
+    padding-top: 0;
+    position: relative;
+  }
+  #animation-wrap {
+    width: 60%;
+  }
+  #title-desktop {
+    font-size: 2.25em;
+    width: 40%;
+    text-align: left;
+  }
+  #title {
+    display: none;
+  }
+  #cta-wrap {
+    display: none;
+  }
+  #desktop-hero {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: fit-content;
+  }
+  .card {
+    flex-wrap: unset !important;
+    width: 100% !important;
+    margin: 0 !important;
+    border-radius: 0px !important;
+  }
+}
+/** landscape, tablet, responsive design */
+@media screen and (min-width: 1200px) {
+  #title-desktop {
+    font-size: 3.25em;
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1300px) {
+  #title-desktop {
+    font-size: 3.25em;
+    width: 50%;
+  }
+  #animation-wrap {
+    width: 40%;
+  }
+  #desktop-hero {
+    bottom: 1em;
+  }
+}
+@media screen and (min-width: 1300px) {
+  #desktop-hero {
+    bottom: 0em;
+  }
+}
+@media screen and (min-width: 1900px) {
+  #title-desktop {
+    font-size: 5em;
   }
 }
 </style>

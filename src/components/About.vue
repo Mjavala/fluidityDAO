@@ -89,4 +89,11 @@ canvas {
     height: 50%;
   }
 }
+
+/** landscape, tablet, responsive design */
+@media screen and (min-width: 600px) {
+  #about-wrap {
+    display: none;
+  }
+}
 </style>

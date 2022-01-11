@@ -38,8 +38,27 @@
     <transition name="fade">
       <div id="navigation-links" class="fade-in" v-if="active">
         <div class="navlinks" @click="toLocation(0)">Home</div>
-        <div class="navlinks" @click="toLocation(1)">About</div>
+        <div class="navlinks navlinks-about" @click="toLocation(1)">About</div>
         <div class="navlinks" @click="toLocation(2)">Roadmap</div>
+        <div id="cta-wrap-nav">
+          <button class="cta-btn" data-aos="fade-up">
+            <div>Presale</div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 cta-icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="#00df57"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
     </transition>
   </div>
@@ -50,7 +69,14 @@ export default {
   data() {
     return {
       active: false,
+      desktop: false,
     };
+  },
+  mounted() {
+    if (Number(window.innerWidth) >= 900) {
+      this.active = true;
+      this.desktop = true;
+    }
   },
   methods: {
     toggleNavigation() {
@@ -65,9 +91,11 @@ export default {
       this.$smoothScroll({
         scrollTo: el,
       });
-      setTimeout(() => {
-        this.toggleNavigation();
-      }, 500);
+      if (!this.desktop) {
+        setTimeout(() => {
+          this.toggleNavigation();
+        }, 500);
+      }
     },
   },
 };
@@ -127,6 +155,9 @@ export default {
 .fade-leave-active {
   animation: fade 1s reverse;
 }
+.cta-wrap-nav {
+  display: none;
+}
 
 @keyframes fade {
   0% {
@@ -141,12 +172,63 @@ export default {
     width: 100vw;
     justify-content: space-between;
   }
+  #navigation-links {
+    width: 50%;
+  }
   #menu {
     margin-right: 2.5em;
   }
   #logo {
     margin-left: 1em;
     width: 14.5em;
+  }
+}
+@media screen and (min-width: 900px) {
+  #navigation-wrap {
+    width: 100vw;
+    justify-content: space-between;
+  }
+  #menu {
+    display: none;
+  }
+  #navigation-links {
+    position: relative;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: auto;
+    background: transparent;
+    width: 57.5%;
+  }
+  .navlinks {
+    padding: 0.25em 0;
+    font-family: "Baloo Bhaina 2", cursive;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+  }
+  .navlinks-about {
+    display: none;
+  }
+  .cta-wrap-nav {
+    display: unset;
+  }
+  .cta-btn {
+    font-size: 1.5em !important;
+    min-height: 47.5px;
+    padding: 0 0.75em;
+  }
+}
+@media screen and (min-width: 600px) {
+  #navigation-links {
+    width: 65%;
+  }
+  #logo {
+    margin-left: 2em;
+    width: 17.5em;
+    margin-bottom: 0.5em;
+  }
+  .navlinks {
+    font-size: 1.75em;
   }
 }
 </style>
