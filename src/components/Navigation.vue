@@ -136,4 +136,17 @@ export default {
     opacity: 0.9;
   }
 }
+@media screen and (min-width: 600px) {
+  #navigation-wrap {
+    width: 100vw;
+    justify-content: space-between;
+  }
+  #menu {
+    margin-right: 2.5em;
+  }
+  #logo {
+    margin-left: 1em;
+    width: 14.5em;
+  }
+}
 </style>

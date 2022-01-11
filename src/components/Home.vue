@@ -14968,11 +14968,12 @@ export default {
   mounted() {
     const navHeight = document.getElementById("navigation-wrap").offsetHeight;
 
-    document.getElementById("home").style.paddingTop = `${navHeight}px`;
-    document.getElementById("home").style.height = `${
-      window.innerHeight - navHeight
-    }px`;
-
+    if (Number(window.innerWidth) < 600) {
+      document.getElementById("home").style.paddingTop = `${navHeight}px`;
+      document.getElementById("home").style.height = `${
+        window.innerHeight - navHeight
+      }px`;
+    }
     !(function (t, n) {
       "object" == typeof exports && "undefined" != typeof module
         ? (module.exports = n())
@@ -17952,5 +17953,12 @@ export default {
 .fluid {
   display: contents;
   color: #00df57;
+}
+
+/** landscape, tablet, responsive design */
+@media screen and (min-width: 600px) {
+  #title {
+    font-size: 1.75em;
+  }
 }
 </style>

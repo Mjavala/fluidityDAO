@@ -79,4 +79,14 @@ canvas {
 .card-item-info {
   font-size: 1.25em;
 }
+/** landscape, tablet, responsive design */
+@media screen and (min-width: 600px) {
+  #about-wrap {
+    height: 30em;
+  }
+  .card {
+    width: 65%;
+    height: 50%;
+  }
+}
 </style>

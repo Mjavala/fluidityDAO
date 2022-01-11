@@ -49,4 +49,10 @@
   width: 30px;
   cursor: pointer;
 }
+/** landscape, tablet, responsive design */
+@media screen and (min-width: 600px) {
+  .avalanche {
+    width: 50%;
+  }
+}
 </style>
