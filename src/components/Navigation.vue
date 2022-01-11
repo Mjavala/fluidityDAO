@@ -41,7 +41,7 @@
         <div class="navlinks navlinks-about" @click="toLocation(1)">About</div>
         <div class="navlinks" @click="toLocation(2)">Roadmap</div>
         <div id="cta-wrap-nav">
-          <button class="cta-btn" data-aos="fade-up">
+          <button class="cta-btn" data-aos="fade-left">
             <div>Presale</div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
