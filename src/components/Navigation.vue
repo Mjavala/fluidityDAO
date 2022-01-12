@@ -197,7 +197,6 @@ export default {
     font-size: 1.75em;
   }
 }
-
 @media screen and (min-width: 900px) {
   #navigation-wrap {
     width: 100vw;
