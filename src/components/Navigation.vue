@@ -38,7 +38,8 @@
     <transition name="fade">
       <div id="navigation-links" class="fade-in" v-if="active">
         <div class="navlinks" @click="toLocation(0)">Home</div>
-        <div class="navlinks navlinks-about" @click="toLocation(1)">About</div>
+        <div class="navlinks" @click="toLocation(0)">Blog</div>
+        <div class="navlinks" @click="toLocation(0)">Docs</div>
         <div class="navlinks" @click="toLocation(2)">Roadmap</div>
         <div id="cta-wrap-nav">
           <button class="cta-btn" data-aos="fade-left">
@@ -183,6 +184,20 @@ export default {
     width: 14.5em;
   }
 }
+@media screen and (min-width: 600px) {
+  #navigation-links {
+    width: 65%;
+  }
+  #logo {
+    margin-left: 2em;
+    width: 17.5em;
+    margin-bottom: 0.5em;
+  }
+  .navlinks {
+    font-size: 1.75em;
+  }
+}
+
 @media screen and (min-width: 900px) {
   #navigation-wrap {
     width: 100vw;
@@ -216,19 +231,6 @@ export default {
     font-size: 1.5em !important;
     min-height: 47.5px;
     padding: 0 0.75em;
-  }
-}
-@media screen and (min-width: 600px) {
-  #navigation-links {
-    width: 65%;
-  }
-  #logo {
-    margin-left: 2em;
-    width: 17.5em;
-    margin-bottom: 0.5em;
-  }
-  .navlinks {
-    font-size: 1.75em;
   }
 }
 </style>

@@ -748,7 +748,7 @@ Main components
 /** desktop */
 @media screen and (min-width: 1200px) {
   .roadmap-title {
-    font-size: 4.25em;
+    font-size: 3.75em;
     padding-right: 1em;
   }
   .roadmap-text {
@@ -768,10 +768,10 @@ Main components
     width: 4em;
   }
   .rm-text h2 {
-    font-size: 3em;
+    font-size: 2.25em;
   }
   .cd-timeline-content p {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 }
 
@@ -781,20 +781,11 @@ Main components
     font-size: 3.75em;
     line-height: 1.5em;
   }
-  .cd-timeline-content h2 {
-    font-size: 3em;
-  }
-  .cd-timeline-content p {
-    font-size: 2em;
-  }
 }
 
 @media screen and (min-width: 1500px) {
   #cd-timeline::before {
     top: 2%;
-  }
-  .roadmap-title {
-    font-size: 4em;
   }
 }
 
@@ -803,13 +794,13 @@ Main components
 /** desktop */
 @media screen and (min-width: 1900px) {
   .roadmap-title {
-    font-size: 4.75em;
+    font-size: 4.25em;
   }
   .cd-timeline-content h2 {
-    font-size: 2.5em;
+    font-size: 2.25em;
   }
   .cd-timeline-content p {
-    font-size: 2em;
+    font-size: 1.75em;
   }
   .cd-timeline-content {
     max-width: 850px;
