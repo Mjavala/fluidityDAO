@@ -1,7 +1,10 @@
 <template>
   <div id="footer-wrap">
+    <div id="footer-inner-wrap">
+      <div class="footer-item">@2022 FluidityDAO, All rights reserved.</div>
+    </div>
     <img class="avalanche" src="../assets/avalanche.svg" />
-    <div class="footer-item">@2022 FluidityDAO, All rights reserved.</div>
+    <!-- 
     <div class="footer-socials">
       <a href="https://twitter.com/FluidityDao">
         <img class="footer-socials-items" src="../assets/twitter.svg" alt="" />
@@ -12,30 +15,32 @@
       <a href="https://twitter.com/FluidityDao">
         <img class="footer-socials-items" src="../assets/discord.svg" alt="" />
       </a>
-      <a href="https://twitter.com/FluidityDao">
-        <img class="footer-socials-items" src="../assets/mail.svg" alt="" />
-      </a>
     </div>
+    -->
   </div>
 </template>
 
 <style>
 #footer-wrap {
-  height: 100%;
+  position: absolute;
+  bottom: 0;
+  height: max-content;
   width: 100vw;
-  background: rgba(2,0,36,1);
+  background: #09062d;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  flex-direction: column-reverse;
   align-items: center;
+  min-height: 50px;
 }
 .footer-item {
   color: white;
   font-family: "Baloo Bhaina 2", cursive;
+  font-size: 0.75em;
 }
 .avalanche {
-  width: 75%;
-  padding-bottom: 1em;
+  width: 35%;
+  padding-bottom: 0.25em;
 }
 .footer-socials {
   display: flex;
@@ -52,24 +57,42 @@
 /** landscape, tablet, responsive design */
 @media screen and (min-width: 600px) {
   .avalanche {
-    width: 50%;
+    width: 22.5%;
   }
+  .avalanche {
+    width: 12.5%;
+    position: absolute;
+    right: 0;
+    padding-right: 1em;
+    flex-direction: unset;
+  }
+.footer-socials-items {
+  height: 40px;
+  width: 40px;
+}
 }
 
 /** landscape, tablet, responsive design */
 @media screen and (min-width: 900px) {
   .avalanche {
-    width: 40%;
+    width: 12.5%;
+    position: absolute;
+    right: 0;
+    padding-right: 1em;
+    flex-direction: unset;
   }
 }
 @media screen and (min-width: 1200px) {
-  .avalanche {
-    width: 30%;
-    padding-bottom: 0.5em;
+  #footer-wrap {
+    bottom: 2.5%;
   }
-  .footer-socials {
-    width: 75%;
-    padding-top: 2em;
+  .avalanche {
+    width: 15%;
+  }
+}
+@media screen and (min-width: 1900px) {
+  .avalanche {
+    width: 12.5%;
   }
 }
 </style>

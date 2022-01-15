@@ -1,5 +1,7 @@
 <template>
   <div id="about-wrap">
+    <Footie />
+    <!--
     <div class="card" data-aos="zoom-in">
       <div class="card-item">
         <div class="card-item-title">APY</div>
@@ -22,11 +24,13 @@
         <div class="spacer"></div>
       </div>
     </div>
+    -->
   </div>
 </template>
 
 <script>
-export default {};
+import Footie from "./Footie.vue";
+export default { components: { Footie } };
 </script>
 
 <style>

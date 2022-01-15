@@ -37,11 +37,35 @@
     </div>
     <transition name="fade">
       <div id="navigation-links" class="fade-in" v-if="active">
+        <div class="footer-socials">
+          <a href="https://twitter.com/FluidityDao" target="_blank">
+            <img
+              class="footer-socials-items"
+              src="../assets/twitter.svg"
+              alt=""
+            />
+          </a>
+          <a href="https://medium.com/@FluidityDAO" target="_blank">
+            <img
+              class="footer-socials-items medium"
+              src="../assets/medium.png"
+              alt=""
+            />
+          </a>
+          <a href="https://discord.gg/z6ubjNDsPJ" target="_blank">
+            <img
+              class="footer-socials-items"
+              src="../assets/discord.svg"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- 
         <div class="navlinks" @click="toLocation(0)">Home</div>
         <div class="navlinks" @click="toLocation(0)">Blog</div>
         <div class="navlinks" @click="toLocation(0)">Docs</div>
         <div class="navlinks" @click="toLocation(2)">Roadmap</div>
-        <div id="cta-wrap-nav">
+          <div id="cta-wrap-nav">
           <button class="cta-btn" data-aos="fade-left">
             <div>Presale</div>
             <svg
@@ -60,7 +84,7 @@
             </svg>
           </button>
         </div>
-      </div>
+      --></div>
     </transition>
   </div>
 </template>
@@ -131,7 +155,7 @@ export default {
 #navigation-links {
   height: 100vh;
   width: 100vw;
-  background: #15a5b0;
+  background: #09062d;
   position: absolute;
   opacity: 0.9;
   top: 0;
@@ -148,6 +172,10 @@ export default {
   font-family: "Baloo Bhaina 2", cursive;
   font-size: 2.5em;
   color: white;
+}
+.medium { 
+  fill: white !important;
+
 }
 
 .fade-enter-active {
@@ -173,9 +201,6 @@ export default {
     width: 100vw;
     justify-content: space-between;
   }
-  #navigation-links {
-    width: 50%;
-  }
   #menu {
     margin-right: 2.5em;
   }
@@ -185,9 +210,6 @@ export default {
   }
 }
 @media screen and (min-width: 600px) {
-  #navigation-links {
-    width: 65%;
-  }
   #logo {
     margin-left: 2em;
     width: 17.5em;
@@ -211,7 +233,7 @@ export default {
     justify-content: space-evenly;
     height: auto;
     background: transparent;
-    width: 57.5%;
+    width: 35%;
   }
   .navlinks {
     padding: 0.25em 0;

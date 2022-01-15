@@ -1,18 +1,17 @@
 <template>
   <div id="home">
-    <canvas id="canvas"></canvas>
     <div id="title" data-aos="fade-down">
-      Stable Revenue.
-      <div class="fluid">Fluid</div>
-      reserves. Multichain liquidity.
+      <div class="stable">Stable</div> revenue.
+      <div class="fluid">Fluid</div> reserves. 
+      <div class="multichain">Multichain</div> treasury.
     </div>
     <div id="title-desktop" data-aos="fade-down">
       <div class="fluid">Fluid</div>
       reserves. <br />
       <div class="stable">Stable</div>
-      Revenue. <br />
+      revenue. <br />
       <div class="multichain">Multichain</div>
-      liquidity.
+      Treasury.
     </div>
     <div id="animation-wrap">
       <svg
@@ -14949,6 +14948,7 @@
         </g>
       </svg>
     </div>
+    <!--
     <div id="desktop-hero">
       <div class="card">
         <div class="card-item">
@@ -14992,24 +14992,26 @@
         </svg>
       </button>
     </div>
+    -->
+    <Footie />
   </div>
 </template>
 
 <script>
-import { dropsAnimation, networkAnimation } from "../utils"
+import { networkAnimation } from "../utils";
+import Footie from "./Footie.vue";
 export default {
   mounted() {
     const navHeight = document.getElementById("navigation-wrap").offsetHeight;
-
     if (Number(window.innerWidth) < 600) {
       document.getElementById("home").style.paddingTop = `${navHeight}px`;
       document.getElementById("home").style.height = `${
         window.innerHeight - navHeight
       }px`;
     }
-    dropsAnimation()
-    networkAnimation()
+    networkAnimation();
   },
+  components: { Footie },
 };
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -15038,6 +15040,9 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+#title-desktop {
+  display: none;
 }
 #animation-wrap {
   height: auto;
@@ -15096,8 +15101,27 @@ export default {
 
 /** landscape, tablet, responsive design */
 @media screen and (min-width: 600px) {
+  #home {
+    height: 100vh;
+    justify-content: space-evenly;
+  }
   #title {
-    font-size: 1.75em;
+    font-size: 2.5em;
+  }
+}
+/** greater height mobile adjustment */
+@media screen and (min-width: 375px) and (min-height: 700px) and (max-width: 450px) {
+  #home {
+    justify-content: space-evenly;
+  }
+}
+@media screen and (min-width: 600px) and (max-height: 500px) {
+  #home {
+    flex-direction: row;
+    padding-top: 50px;
+  }
+  #title {
+    font-size: 2em;
   }
 }
 /** landscape, tablet, responsive design */
@@ -15115,6 +15139,7 @@ export default {
     font-size: 2.25em;
     width: 40%;
     text-align: left;
+    display: flex;
   }
   #title {
     display: none;
