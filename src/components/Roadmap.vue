@@ -350,7 +350,8 @@
   margin: 0;
   overflow-x: hidden;
   padding: 0 0.75em;
-  background-color: #09062d;
+ background: rgb(0,0,0);
+background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(2,0,36,1) 51%, rgba(2,0,36,1) 51%); 
 }
 .roadmap-content-wrapper {
   display: flex;

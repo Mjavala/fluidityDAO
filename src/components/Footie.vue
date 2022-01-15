@@ -23,7 +23,7 @@
 #footer-wrap {
   height: 100%;
   width: 100vw;
-  background: #09062d;
+  background: rgba(2,0,36,1);
   display: flex;
   flex-direction: column;
   justify-content: center;
