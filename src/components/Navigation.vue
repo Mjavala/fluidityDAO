@@ -218,6 +218,7 @@ export default {
   .navlinks {
     font-size: 1.75em;
   }
+  
 }
 @media screen and (min-width: 900px) {
   #navigation-wrap {
