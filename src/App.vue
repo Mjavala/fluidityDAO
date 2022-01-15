@@ -14,6 +14,7 @@ import Navigation from "./components/Navigation.vue";
 // import About from "./components/About.vue";
 // import Roadmap from "./components/Roadmap.vue";
 // import Footie from "./components/Footie.vue";
+document.title = "Fluidity DAO"
 </script>
 
 <style>
